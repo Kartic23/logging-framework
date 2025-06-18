@@ -1,0 +1,22 @@
+h1{
+    margin-left: 10px; 
+}
+
+b{
+    margin-left: 10px; 
+}
+
+table{
+    width: 50%;
+}
+
+
+th {
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  padding: 15px;
+  text-align: left;
+}
