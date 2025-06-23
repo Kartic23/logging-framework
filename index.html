@@ -4,7 +4,7 @@
     <title>Logging</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="logging-style.css">
+    <link rel="stylesheet" href="css/index-style.css">
     <link rel="icon" type="image/x-icon" href="images/icon.ico">
 </head>
 <body>
@@ -55,36 +55,43 @@ A ideia será ter uma forma coerente de apresentação de logs, dividindo em dif
 
 <b>Niveis de Log</b>
 <p></p>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>John</td>
-      <td>Doe</td>
-      <td>@social</td>
-    </tr>
-  </tbody>
-</table>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Nivel Básico</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Registar o início e o fim de cada fluxo principal da aplicação.</h6>
+    <p class="card-text"><b>Exemplo:</b>
+      <br>
+      "[env = dev] [app = e-shop] [service = get-products][id = 12345]  - Started Flow! "
+      <br>
+      "[env = dev] [app = e-shop] [service = get-products][id = 12345]  - Flow Ended! " 
+    </p>
+  </div>
+</div>
+
+<br>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Nivel Intermédio</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Incluir logs antes e depois de processos críticos, como chamadas à base de dados, requisições HTTP, transformações ou cálculos relevantes.</h6>
+    <p class="card-text"><b>Exemplo:</b>
+      <br>
+      "[env = dev] [app = e-shop] [service = get-products][id = 12345]  - GET products from DB! "
+      <br>
+      "[env = dev] [app = e-shop] [service = get-products][id = 12345]  - Get products successfully " 
+    </p>
+  </div>
+</div>
+
+<br>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Nivel Avançado</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Proporcionar visibilidade completa do processamento, incluindo detalhes dos payloads recebidos e todas as transformações de dados realizadas ao longo do fluxo.</h6>
+    <p class="card-text">TO DO</p>
+  </div>
+</div>
 
 <b>Exemplo de Log em Java</b>
 
